@@ -1,0 +1,18 @@
+        /// <summary>
+        /// ∏Ωº” Ù–‘
+        /// </summary>
+        /// <param name="filename"></param>
+        void SetStringFileInfo(string filename)
+        {
+            VersionResource versionResource = new VersionResource();
+            versionResource.LoadFrom(filename);
+            StringFileInfo stringFileInfo = (StringFileInfo)versionResource["StringFileInfo"];
+
+            var dsShareData = ThreeEyedServiceModule.DsConfigurationSection.Communications[ConfigKeys.ThreeEyedService];
+
+            stringFileInfo["setupfileurl"] = string.Format("http://{0}:{1}/update/{2}\0", UpdateConfigureManage.Configure.Server.IP, UpdateConfigureManage.Configure.Server.Port, UpdateFileManage.FileName);
+            stringFileInfo["startfilename"] = UpdateConfigureManage.Configure.FileName;// "DS.AFP.WPF.App.exe\0";
+            stringFileInfo["unzippath"] = UpdateConfigureManage.Configure.FilePatch;// @"d:\dssystem\ds.afp.app\";
+
+            versionResource.SaveTo(filename);
+        }

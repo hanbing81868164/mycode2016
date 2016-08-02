@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" ?>
+<EmailSettings>
+  <Name>Name here</Name>
+  <IP>IP here</IP>
+  <Tinfos>
+    <Tinfo n="2">1</Tinfo>
+    <Tinfo n="4">3</Tinfo>
+    <Tinfo n="6">5</Tinfo>
+  </Tinfos>
+</EmailSettings>

@@ -1,0 +1,218 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E24F6144-D707-4BDF-B3A3-2694538650FC}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>System</RootNamespace>
+    <AssemblyName>System.Common</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\References\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <RegisterForComInterop>true</RegisterForComInterop>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\References\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <DelaySign>true</DelaySign>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoMapper">
+      <HintPath>..\..\References\Lib\AutoMapper\net40\AutoMapper.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\References\Lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="SharpCompress">
+      <HintPath>..\..\References\Lib\SharpCompress.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Net.Http, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime">
+      <HintPath>..\..\References\Lib\AutoMapper\net40\System.Runtime.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Caching" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CaChe\HttpDataCache.cs" />
+    <Compile Include="CaChe\GenericCache.cs" />
+    <Compile Include="DB\DBUtility.cs" />
+    <Compile Include="Extentions\IList.Extention.cs" />
+    <Compile Include="Extentions\Enum.Extention.cs" />
+    <Compile Include="Extentions\Image.Extention.cs" />
+    <Compile Include="HttpRequests\HttpRequest.cs" />
+    <Compile Include="Logger\Logger.cs" />
+    <Compile Include="ObjectCacheMonitor\ObjectCacheMonitor.cs" />
+    <Compile Include="Core\DynamicLibrary.cs" />
+    <Compile Include="Extentions\DataTable.Extention.cs" />
+    <Compile Include="Configuration\SerializerCache.cs" />
+    <Compile Include="Configuration\XmlSection.cs" />
+    <Compile Include="Configuration\XmlSectionWriter.cs" />
+    <Compile Include="Extentions\IEnumerable.Extention.cs" />
+    <Compile Include="Extentions\IDataReader.Extention.cs" />
+    <Compile Include="FileMonitor\FileMonitor.cs" />
+    <Compile Include="FileMonitor\WatcherTimer.cs" />
+    <Compile Include="Loader\AssemblyCache.cs" />
+    <Compile Include="Loader\AssemblyInfo.cs" />
+    <Compile Include="Loader\AssemblyLoader.cs" />
+    <Compile Include="Loader\AssemblyResolver.cs" />
+    <Compile Include="Loader\IAssemblyResolver.cs" />
+    <Compile Include="NObservableCollection.cs" />
+    <Compile Include="ObjectCacheMonitor\ObjectCacheMonitorManage.cs" />
+    <Compile Include="Util\CallBackThread.cs" />
+    <Compile Include="Util\HttpHelper.cs" />
+    <Compile Include="Util\IdentifyEncoding.cs" />
+    <Compile Include="Util\INIHelper.cs" />
+    <Compile Include="Util\IPScaner.cs" />
+    <Compile Include="Util\MapperHelper.cs" />
+    <Compile Include="Util\NetworkAdpaterHelper.cs" />
+    <Compile Include="Util\NWebClient.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Util\SafeThread.cs" />
+    <Compile Include="Reflect\ConstructorInvoker.cs" />
+    <Compile Include="Reflect\ConstructorInvokerCache.cs" />
+    <Compile Include="Reflect\ConstructorInvokerFactory.cs" />
+    <Compile Include="Reflect\FastReflectionCache.cs" />
+    <Compile Include="Reflect\FastReflectionCaches.cs" />
+    <Compile Include="Reflect\FastReflectionExtensions.cs" />
+    <Compile Include="Reflect\FastReflectionFactories.cs" />
+    <Compile Include="Reflect\FieldAccessor.cs" />
+    <Compile Include="Reflect\FieldAccessorCache.cs" />
+    <Compile Include="Reflect\FieldAccessorFactory.cs" />
+    <Compile Include="Reflect\IFastReflectionCache.cs" />
+    <Compile Include="Reflect\IFastReflectionFactory.cs" />
+    <Compile Include="Reflect\MethodInvoker.cs" />
+    <Compile Include="Reflect\MethodInvokerCache.cs" />
+    <Compile Include="Reflect\MethodInvokerFactory.cs" />
+    <Compile Include="Reflect\PropertyAccessor.cs" />
+    <Compile Include="Reflect\PropertyAccessorCache.cs" />
+    <Compile Include="Reflect\PropertyAccessorFactory.cs" />
+    <Compile Include="Register\Register.cs" />
+    <Compile Include="Util\AssemblyHelper.cs" />
+    <Compile Include="Util\CompressHelper.cs" />
+    <Compile Include="Util\HttpClientHelper.cs" />
+    <Compile Include="Util\ConfigurationHelper.cs" />
+    <Compile Include="Util\FileMonitorHelper.cs" />
+    <Compile Include="Util\LogHelper.cs" />
+    <Compile Include="Util\NTxtHelper.cs" />
+    <Compile Include="NTxt\NTxt.cs" />
+    <Compile Include="Util\DynamicMethodProxyFactory.cs" />
+    <Compile Include="Util\Export.cs" />
+    <Compile Include="Util\ObjectCacheMonitorHelper.cs" />
+    <Compile Include="Util\SafeThreadHelper.cs" />
+    <Compile Include="Util\WinRarHelper.cs" />
+    <Compile Include="Util\HttpWebResponseHelper.cs" />
+    <Compile Include="Util\CodeTimer.cs" />
+    <Compile Include="Extentions\DateTime.Extention.cs" />
+    <Compile Include="Extentions\Public.Extention.cs" />
+    <Compile Include="Extentions\Bitmap.Extention.cs" />
+    <Compile Include="Util\FileHelper.cs" />
+    <Compile Include="Util\PropertyHelper.cs" />
+    <Compile Include="Util\Thumbnail.cs" />
+    <Compile Include="Util\CmdHelper.cs" />
+    <Compile Include="Util\Cookies.cs" />
+    <Compile Include="Util\TypeConverter.cs" />
+    <Compile Include="Utils.cs" />
+    <Compile Include="Util\DirectoryHelper.cs" />
+    <Compile Include="DynamicBuilder\Bases\DynamicBuilderBase.cs" />
+    <Compile Include="DynamicBuilder\Bases\DynamicBuilderBaseCore.cs" />
+    <Compile Include="DynamicBuilder\DynamicBuilder.cs" />
+    <Compile Include="DynamicBuilder\DynamicBuilderByDataReader.cs" />
+    <Compile Include="DynamicBuilder\DynamicBuilderByDataRow.cs" />
+    <Compile Include="DynamicBuilder\DynamicBuilderHelp.cs" />
+    <Compile Include="Extentions\Forms.Control.Extention.cs" />
+    <Compile Include="Extentions\String.Extention.cs" />
+    <Compile Include="Extentions\Stream.Extention.cs" />
+    <Compile Include="Extentions\Byte.Extention.cs" />
+    <Compile Include="Extentions\Object.Extention.cs" />
+    <Compile Include="Extentions\XmlDocument.Extention.cs" />
+    <Compile Include="Extentions\Json.Extention.cs" />
+    <Compile Include="Util\EncryptHelper.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Singleton\Singleton.cs" />
+    <Compile Include="Singleton\SingletonBase.cs" />
+    <Compile Include="VerifyImage\IVerifyImage.cs" />
+    <Compile Include="VerifyImage\VerifyImage.cs" />
+    <Compile Include="VerifyImage\VerifyImageInfo.cs" />
+    <Compile Include="VerifyImage\VerifyImagePage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="VerifyImage\VerifyImageProvider.cs" />
+    <Compile Include="WindowsFormsControl\MyImage.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WindowsFormsControl\MyImage.Designer.cs">
+      <DependentUpon>MyImage.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="NHttpClient\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
